@@ -21,6 +21,7 @@
     "react-redux": "^9.1.0"
   },
   "devDependencies": {
+    "@mui/x-date-pickers": "^6.19.7",
     "@stylistic/eslint-plugin": "^1.7.0",
     "@types/node": "^20",
     "@types/react": "^18",
