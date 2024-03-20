@@ -1,0 +1,82 @@
+{
+  "files.associations": {},
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.cursorBlinking": "solid",
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "explorer.compactFolders": false,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.accessibilitySupport": "off",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "explorer.confirmDelete": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    },
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "source": "PowerShell"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "git.autofetch": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "emmet.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact"
+  },
+  "[javascript]": {},
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "GitHub Dark",
+  "eslint.enable": true,
+  "editor.cursorStyle": "block",
+  "files.eol": "\n",
+  "editor.fontFamily": "'D2Coding'",
+  "javascript.validate.enable": false,
+  "editor.tabSize": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.inlineSuggest.enabled": true,
+  "javascript.preferences.quoteStyle": "single",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "scm.inputFontSize": 12,
+  "editor.fontSize": 14,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {},
+  "eslint.format.enable": true,
+}
