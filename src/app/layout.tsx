@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { CssBaseline } from '@mui/material';
+
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -17,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <CssBaseline />
       <body>{children}</body>
     </html>
   );
