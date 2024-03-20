@@ -21,11 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <CssBaseline />
       <body>
-        <Container maxWidth="xs" fixed>
-          {children}
-        </Container>
+        {children}
       </body>
-
     </html>
   );
 }
