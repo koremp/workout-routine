@@ -1,4 +1,8 @@
-{
+import import stylisticTs from '@stylistic/eslint-plugin-ts'
+import parserTs from '@typescript-eslint/parser'
+
+export default {
+  "plugins": ["@stylistic/ts"],
   "extends": "next/core-web-vitals",
   "rules": {
     "semi": [
@@ -74,6 +78,8 @@
     ],
     "linebreak-style": "off",
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    '@stylistic/ts/quotes': "double",
+    '@stylistic/js/quotes': "double",
   }
-}
+};
