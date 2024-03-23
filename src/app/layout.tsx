@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 
-import { Container, CssBaseline } from '@mui/material';
+import {
+  CssBaseline,
+} from '@mui/material';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import PageContainer from '@/components/PageContainer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +20,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <CssBaseline />
       <body>
-        {children}
+        <PageContainer>
+          {children}
+        </PageContainer>
       </body>
     </html>
   );
