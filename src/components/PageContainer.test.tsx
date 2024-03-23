@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import PageContainer from '../PageContainer';
+import PageContainer from './PageContainer';
 
 describe("PageContainer", () => {
   it("renders children.", () => {
