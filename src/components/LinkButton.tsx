@@ -1,7 +1,5 @@
 import { Button } from '@mui/material';
 
-import { Add } from '@mui/icons-material';
-
 import Link from 'next/link';
 
 const LinkButton = ({ icon, href, text }: { icon: any, href: string, text: string }) => {
