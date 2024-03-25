@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import accountReducer from './reducers/account';
 import globalReducer from './reducers/global';
 
-export const store = configureStore({
+export const makeStore = () => configureStore({
   reducer: {
     account: accountReducer,
     global: globalReducer,
@@ -10,6 +10,7 @@ export const store = configureStore({
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export type AppStore = ReturnType<typeof makeStore>
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<AppStore['getState']>
+export type AppDispatch = AppStore['dispatch']
