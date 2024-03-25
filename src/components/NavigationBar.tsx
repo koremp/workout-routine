@@ -1,8 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+'use client';
 
 import {
   BottomNavigation,
   BottomNavigationAction,
+  Paper,
 } from '@mui/material';
 
 import {
@@ -11,38 +12,45 @@ import {
   History as HistoryIcon,
 } from '@mui/icons-material';
 
-import { RootState } from '@/app/app';
+import {
+  useAppSelector,
+  useAppDispatch,
+  useAppStore,
+} from '../lib/hooks';
+
 
 import type { NavigationAction } from './interfaces/NavigationAction';
 
-import { setNavigation } from '@/app/reducers/global';
+import { setNavigation } from '@/lib/reducers/global';
 
 const NavigationBar = () => {
-  const dispatch = useDispatch();
+  const store = useAppStore();
+  const dispatch = useAppDispatch();
 
-  const value = useSelector((state: RootState) => state.global.navigation);
+  const navigation = useAppSelector(state => state.global.navigation);
 
-  const navigationActions: NavigationAction[] = [
-    { label: 'Home', icon: HomeIcon },
-    { label: 'Workout', icon: WorkoutIcon },
-    { label: 'History', icon: HistoryIcon },
-  ] satisfies NavigationAction[];
-
-  const onChange = (newValue: string) => {
+  const onChange = (event: any, newValue: number) => {
     dispatch(setNavigation(newValue));
   };
 
-
   return (
-    <BottomNavigation
-      showLabels
-      value={value}
-      onChange={onChange}
-    >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Workout" icon={<WorkoutIcon />} />
-      <BottomNavigationAction label="History" icon={<HistoryIcon />} />
-    </BottomNavigation>
+    <Paper sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
+      <BottomNavigation
+        showLabels
+        value={navigation}
+        onChange={onChange}
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+        }}
+      >
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Workout" icon={<WorkoutIcon />} />
+        <BottomNavigationAction label="History" icon={<HistoryIcon />} />
+      </BottomNavigation>
+    </Paper>
   );
 };
 
