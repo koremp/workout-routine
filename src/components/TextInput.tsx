@@ -2,16 +2,16 @@ import {
   Box,
   Typography,
   TextField,
-} from '@mui/material';
+} from "@mui/material";
 
 const TextInput = ({ label }: { label: string }) => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Typography>{label}</Typography>

@@ -1,6 +1,6 @@
-import { Button } from '@mui/material';
+import { Button } from "@mui/material";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 const LinkButton = ({ icon, href, text }: { icon: any, href: string, text: string }) => {
   return (

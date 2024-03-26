@@ -1,13 +1,13 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import NavigationBar from './NavigationBar';
+import NavigationBar from "./NavigationBar";
 
 import {
   navigationActions,
-} from './interfaces/NavigationAction';
+} from "./interfaces/NavigationAction";
 
 describe("NavigationBar", () => {
-  it('renders labels.', () => {
+  it("renders labels.", () => {
     const actions = navigationActions.map(
       ({ label, icon }) => {
         return {

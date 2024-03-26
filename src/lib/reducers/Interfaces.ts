@@ -5,9 +5,9 @@ interface InitialAccountState {
 }
 
 const initialAccountState: InitialAccountState = {
-  id: '',
-  password: '',
-  accessToken: '',
+  id: "",
+  password: "",
+  accessToken: "",
 } satisfies InitialAccountState as InitialAccountState;
 
 export type {

@@ -1,12 +1,12 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { initialAccountState } from './Interfaces';
+import { initialAccountState } from "./Interfaces";
 
 const signIn = createAsyncThunk(
-  'account/sign-in',
+  "account/sign-in",
   async (id, password) => {
-    const response = await fetch(``);
+    const response = await fetch("");
     return response.json();
   },
 );
@@ -14,7 +14,7 @@ const signIn = createAsyncThunk(
 export { signIn };
 
 const accountSlice = createSlice({
-  name: 'account',
+  name: "account",
   initialState: initialAccountState,
   reducers: {
     setId(state, action: PayloadAction<string>) {
@@ -27,7 +27,7 @@ const accountSlice = createSlice({
       state.accessToken = action.payload;
     },
     signOut(state) {
-      state.accessToken = '';
+      state.accessToken = "";
     },
   },
   extraReducers: (builder) => {

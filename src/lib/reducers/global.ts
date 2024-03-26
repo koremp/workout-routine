@@ -1,14 +1,14 @@
 import {
   createSlice,
-} from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
+} from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   navigation: 0,
 };
 
 const globalSlice = createSlice({
-  name: 'global',
+  name: "global",
   initialState,
   reducers: {
     setNavigation(state, action: PayloadAction<number>) {

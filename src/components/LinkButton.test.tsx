@@ -1,9 +1,9 @@
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import LinkButton from './LinkButton';
-import { Add } from '@mui/icons-material';
+import LinkButton from "./LinkButton";
+import { Add } from "@mui/icons-material";
 
-describe('LinkButton', () => {
+describe("LinkButton", () => {
   const icon = <Add />;
   const href = "href";
   const text = "text";
@@ -20,22 +20,22 @@ describe('LinkButton', () => {
     );
   };
 
-  it('renders text.', () => {
+  it("renders text.", () => {
     const { getByText } = renderLinkButton();
 
     expect(getByText(text).textContent).toEqual(text);
   });
 
-  it('renders icon.', () => {
+  it("renders icon.", () => {
     const { getByTestId } = renderLinkButton();
 
     expect(getByTestId("AddIcon"));
   });
 
-  it('has href.', () => {
+  it("has href.", () => {
     const { getByRole } = renderLinkButton();
 
-    expect(getByRole('link', { name: text }))
-      .toHaveAttribute('href', href);
+    expect(getByRole("link", { name: text }))
+      .toHaveAttribute("href", href);
   });
 });
